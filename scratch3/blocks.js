@@ -183,6 +183,7 @@ export class InputView {
       boolean: SVG.pointedRect,
       stack: SVG.stackRect,
       reporter: SVG.pillRect,
+      leaf: SVG.leafRect,
     }
   }
 
