@@ -331,6 +331,7 @@ class BlockView {
 
       cap: SVG.capRect,
       reporter: SVG.pillRect,
+      leaf: SVG.leafRect,
       boolean: SVG.pointedRect,
       hat: SVG.hatRect,
       cat: SVG.catHat,
