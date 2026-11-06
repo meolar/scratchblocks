@@ -434,7 +434,7 @@ export function lookupHash(hash, info, children, languages) {
       const collisions = lang.blocksByHash[hash]
       for (let block of collisions) {
         if (
-          info.shape === "reporter" &&
+          (info.shape === "reporter" || info.shape === "leaf") &&
           block.shape !== "reporter" &&
           block.shape !== "ring"
         ) {
