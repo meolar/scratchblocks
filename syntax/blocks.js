@@ -34,6 +34,7 @@ const overrideShapes = [
   "reporter",
   "ring",
   "cat",
+  "leaf",
 ]
 
 // languages that should be displayed right to left
