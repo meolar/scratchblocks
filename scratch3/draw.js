@@ -108,13 +108,21 @@ export default class SVG {
   static leafRect(w, h, props) {
     const R = h / 2
     const r = h / 5
-    const d = `M ${r} 0 h ${w - R - r} a ${R} ${R} 0 0 1 ${R} ${R} v ${h - R - r} a ${r} ${r} 0 0 1 -${r} ${r} h -${w - R - r} a ${R} ${R} 0 0 1 -${R} -${R} v -${h - R - r} a ${r} ${r} 0 0 1 ${r} -${r} z`
-    const el = document.createElementNS('http://www.w3.org/2000/svg', 'path')
-    el.setAttribute('d', d)
-    for (const [k, v] of Object.entries(props)) {
-      el.setAttribute(k, v)
-    }
-    return el
+    return SVG.path({
+      ...props,
+      path: [
+        `M ${r} 0`,
+        `h ${w - R - r}`,
+        `a ${R} ${R} 0 0 1 ${R} ${R}`,
+        `v ${h - R - r}`,
+        `a ${r} ${r} 0 0 1 -${r} ${r}`,
+        `h -${w - R - r}`,
+        `a ${R} ${R} 0 0 1 -${R} -${R}`,
+        `v -${h - R - r}`,
+        `a ${r} ${r} 0 0 1 ${r} -${r}`,
+        'z'
+      ]
+    })
   }
 
   static pointedPath(w, h) {
