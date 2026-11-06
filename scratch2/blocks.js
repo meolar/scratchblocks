@@ -146,7 +146,6 @@ class InputView {
       boolean: SVG.pointedRect,
       stack: SVG.stackRect,
       reporter: SVG.roundedRect,
-      leaf: SVG.leafRect,
     }
   }
 
