@@ -372,3 +372,4 @@ export default class SVG {
     })
   }
 }
+
