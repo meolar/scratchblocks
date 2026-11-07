@@ -172,6 +172,26 @@ export default class SVG {
     return SVG.path({ ...props, path: SVG.roundedPath(w, h) })
   }
 
+  static leafRect(w, h, props) {
+    const R = h / 2
+    const r = h / 5
+    return SVG.path({
+      ...props,
+      path: [
+        `M ${r} 0`,
+        `h ${w - R - r}`,
+        `a ${R} ${R} 0 0 1 ${R} ${R}`,
+        `v ${h - R - r}`,
+        `a ${r} ${r} 0 0 1 -${r} ${r}`,
+        `h -${w - R - r}`,
+        `a ${R} ${R} 0 0 1 -${R} -${R}`,
+        `v -${h - R - r}`,
+        `a ${r} ${r} 0 0 1 ${r} -${r}`,
+        'z'
+      ]
+    })
+  }
+
   static pointedPath(w, h) {
     const r = h / 2
     return [

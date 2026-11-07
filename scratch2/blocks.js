@@ -265,6 +265,7 @@ class BlockView {
       cap: SVG.capRect,
       reporter: SVG.roundedRect,
       boolean: SVG.pointedRect,
+      leaf: SVG.leafRect,
       hat: SVG.hatRect,
       cat: SVG.hatRect,
       "define-hat": SVG.procHatRect,
