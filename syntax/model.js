@@ -159,7 +159,9 @@ export class Input {
           ? "<>"
           : this.isStack
             ? "{}"
-            : text
+            : this.value === "" && this.shape !== "reporter" && this.shape !== "string" && this.shape !== "number"
+              ? `|${this.shape}|`
+              : text
   }
 
   translate(_lang) {

@@ -243,7 +243,7 @@ export class InputView {
           stroke: "rgba(0, 0, 0, 0.15)", // combines with fill...
         })
       }
-    } else if (this.shape === "boolean") {
+    } else if (this.value === "" && !["string", "number", "dropdown", "color"].includes(this.shape)) {
       el.classList.remove(`sb3-${parent.info.category}`)
       el.classList.add(`sb3-${parent.info.category}-dark`)
 

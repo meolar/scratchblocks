@@ -144,6 +144,7 @@ class InputView {
       dropdown: SVG.rect,
 
       boolean: SVG.pointedRect,
+      leaf: SVG.leafRect,
       stack: SVG.stackRect,
       reporter: SVG.roundedRect,
     }

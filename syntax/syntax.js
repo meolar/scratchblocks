@@ -281,6 +281,10 @@ function parseLines(code, languages) {
       }
 
       switch (tok) {
+        case "|":
+          label = null
+          children.push(pCustomInput())
+          break
         case "[":
           label = null
           children.push(pString())
@@ -481,6 +485,18 @@ function parseLines(code, languages) {
     }
     return makeBlock("boolean", children)
   }
+
+  function pCustomInput() {
+  next() // consume opening "|"
+  let name = ""
+  while (tok && tok !== "|" && tok !== "\n") {
+    name += tok
+    next()
+  }
+  next() // consume closing "|"
+  if (!name) return new Input("reporter")
+  return new Input(name)
+}   
 
   function pEmbedded() {
     next() // '{'
