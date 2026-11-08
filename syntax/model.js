@@ -110,11 +110,13 @@ export class Input {
     this.isBoolean = shape === "boolean"
     this.isStack = shape === "stack"
     this.isInset =
-      shape === "boolean" || shape === "stack" || shape === "reporter"
+      shape === "boolean" || shape === "stack" || shape === "reporter" ||
+      (value === "" && !["string", "number", "number-dropdown", "color", "dropdown"].includes(shape))   
     this.isColor = shape === "color"
     this.hasArrow = shape === "dropdown" || shape === "number-dropdown"
     this.isDarker =
-      shape === "boolean" || shape === "stack" || shape === "dropdown"
+      shape === "boolean" || shape === "stack" || shape === "dropdown" ||
+      (value === "" && !["string", "number", "number-dropdown", "color"].includes(shape))   
     this.isSquare =
       shape === "string" || shape === "color" || shape === "dropdown"
 

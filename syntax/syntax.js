@@ -481,7 +481,7 @@ function parseLines(code, languages) {
       next()
     }
     if (children.length === 0) {
-      return new Input("boolean")
+      return new Input("boolean", "")
     }
     return makeBlock("boolean", children)
   }
