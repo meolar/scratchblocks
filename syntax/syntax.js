@@ -495,7 +495,7 @@ function parseLines(code, languages) {
   }
   next() // consume closing "|"
   if (!name) return new Input("reporter")
-  return new Input(name)
+  return new Input(name, "")
 }   
 
   function pEmbedded() {
