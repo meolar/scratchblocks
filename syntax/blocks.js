@@ -35,6 +35,7 @@ const overrideShapes = [
   "ring",
   "cat",
   "leaf",
+  "plus",
 ]
 
 // languages that should be displayed right to left
@@ -434,7 +435,7 @@ export function lookupHash(hash, info, children, languages) {
       const collisions = lang.blocksByHash[hash]
       for (let block of collisions) {
         if (
-          (info.shape === "reporter" || info.shape === "leaf") &&
+          (info.shape === "reporter" || info.shape === "leaf" || info.shape === "plus") &&
           block.shape !== "reporter" &&
           block.shape !== "ring"
         ) {

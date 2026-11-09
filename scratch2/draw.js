@@ -192,6 +192,36 @@ export default class SVG {
     })
   }
 
+    static plusRect(w, h, props) {
+    const r = h / 8
+    return SVG.path({
+      ...props,
+      path: [
+        `M ${w - 3 * r} 0`,
+        `a ${r} ${r} 0 0 1 ${r} ${r}`,
+        `l 0 ${r / 2}`,
+        `a ${r} ${r} 0 0 0 ${r} ${r}`,
+        `a ${r} ${r} 0 0 1 ${r} ${r}`,
+        `l 0 ${r}`,
+        `a ${r} ${r} 0 0 1 -${r} ${r}`,
+        `a ${r} ${r} 0 0 0 -${r} ${r}`,
+        `l 0 ${r / 2}`,
+        `a ${r} ${r} 0 0 1 -${r} ${r}`,
+        `h -${w - 6 * r}`,
+        `a ${r} ${r} 0 0 1 -${r} -${r}`,
+        `l 0 -${r / 2}`,
+        `a ${r} ${r} 0 0 0 -${r} -${r}`,
+        `a ${r} ${r} 0 0 1 -${r} -${r}`,
+        `l 0 -${r}`,
+        `a ${r} ${r} 0 0 1 ${r} -${r}`,
+        `a ${r} ${r} 0 0 0 ${r} -${r}`,
+        `l 0 -${r / 2}`,
+        `a ${r} ${r} 0 0 1 ${r} -${r}`,
+        'z'
+      ]
+    })
+  }
+
   static pointedPath(w, h) {
     const r = h / 2
     return [

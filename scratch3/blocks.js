@@ -184,6 +184,7 @@ export class InputView {
       stack: SVG.stackRect,
       reporter: SVG.pillRect,
       leaf: SVG.leafRect,
+      plus: SVG.plusRect,
     }
   }
 
@@ -336,6 +337,7 @@ class BlockView {
       cap: SVG.capRect,
       reporter: SVG.pillRect,
       leaf: SVG.leafRect,
+      plus: SVG.plusRect,
       boolean: SVG.pointedRect,
       hat: SVG.hatRect,
       cat: SVG.catHat,

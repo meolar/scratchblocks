@@ -145,6 +145,7 @@ class InputView {
 
       boolean: SVG.pointedRect,
       leaf: SVG.leafRect,
+      plus: SVG.plusRect,
       stack: SVG.stackRect,
       reporter: SVG.roundedRect,
     }
@@ -267,6 +268,7 @@ class BlockView {
       reporter: SVG.roundedRect,
       boolean: SVG.pointedRect,
       leaf: SVG.leafRect,
+      plus: SVG.plusRect,
       hat: SVG.hatRect,
       cat: SVG.hatRect,
       "define-hat": SVG.procHatRect,
