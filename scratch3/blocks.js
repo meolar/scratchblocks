@@ -194,7 +194,7 @@ export class InputView {
     if (this.isBoolean) {
       w = 48
     } else if (this.value === "" && !["string", "number", "dropdown", "color", "boolean", "stack"].includes(this.shape)) {
-      w = 60   
+      w = 50
     } else if (this.isColor) {
       w = 40
     } else if (this.hasLabel) {
