@@ -197,6 +197,7 @@ export class InputView {
       w = 50
     } else if (this.value === "" && this.shape === "stack") {
       w = 60
+      h = 27
     } else if (this.isColor) {
       w = 40
     } else if (this.hasLabel) {
