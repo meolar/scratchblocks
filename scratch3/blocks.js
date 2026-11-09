@@ -193,8 +193,10 @@ export class InputView {
     let px
     if (this.isBoolean) {
       w = 48
-    } else if (this.value === "" && !["string", "number", "dropdown", "color", "boolean"].includes(this.shape)) {
+    } else if (this.value === "" && !["string", "number", "dropdown", "color", "boolean", "stack"].includes(this.shape)) {
       w = 50
+    } else if (this.value === "" && this.shape === "stack") {
+      w = 60
     } else if (this.isColor) {
       w = 40
     } else if (this.hasLabel) {
