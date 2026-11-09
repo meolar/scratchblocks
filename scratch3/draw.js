@@ -155,6 +155,25 @@ export default class SVG {
     })
   }
 
+    static octagonalRect(w, h, props) {
+    const c = h / 4
+    return SVG.path({
+      ...props,
+      path: [
+        `M ${c} 0`,
+        `h ${w - 2 * c}`,
+        `l ${c} ${c}`,
+        `v ${h - 2 * c}`,
+        `l -${c} ${c}`,
+        `h -${w - 2 * c}`,
+        `l -${c} -${c}`,
+        `v -${h - 2 * c}`,
+        `l ${c} -${c}`,
+        'z'
+      ]
+    })
+  }
+
   static pointedPath(w, h) {
     const r = h / 2
     return [

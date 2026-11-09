@@ -202,7 +202,8 @@ export class Block {
     this.isReporter =
       shape === "reporter" ||
       shape === "leaf" ||
-      shape === "plus"
+      shape === "plus" ||
+      shape === "octagon"
     this.isBoolean = shape === "boolean"
 
     this.isRing = shape === "ring"
